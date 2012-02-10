@@ -12,9 +12,7 @@ The algorithm is implemented inside a web workers so it provide a simple means t
 
 ## Object passed to the script
 
-	For every node, list each node connected.
-	n: id of the node connected
-	w: weight of the connection
+For every node of the map, list each node connected. The node is descripted by the object '{n:i, w:K}' where 'i' is the id of the node connected and	'K' the weight of the connection.
 
 	{
 		from: id_start,

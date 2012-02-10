@@ -1,23 +1,3 @@
-/*
-Input Object:
-	{
-		from: 0,
-		to: 6,
-		map: [
-			[{n:1,w:2}, {n:4,w:8}],
-			[{n:0,w:2}, {n:2,w:6}, {n:3,w:2}],
-			[{n:1,w:6}, {n:6,w:5}],
-			[{n:1,w:2}, {n:4,w:2}, {n:5,w:9}],
-			[{n:0,w:8}, {n:3,w:2}, {n:5,w:3}],
-			[{n:3,w:9}, {n:4,w:3}, {n:6,w:1}],
-			[{n:2,w:5}, {n:5,w:1}]
-		]
-	}
-Map description.
-	For every node, list each node connected.
-	n: id of the node connected
-	w: weight of the connection
-*/
 self.onmessage = function(event) {
 	var obj = event.data,	
 		V = {
