@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script>
+			var obj = {
+				from: 0,
+				to: 6,
+				map: [
+					[{n:1,w:2}, {n:4,w:8}],
+					[{n:0,w:2}, {n:2,w:6}, {n:3,w:2}],
+					[{n:1,w:6}, {n:6,w:5}],
+					[{n:1,w:2}, {n:4,w:2}, {n:5,w:9}],
+					[{n:0,w:8}, {n:3,w:2}, {n:5,w:3}],
+					[{n:3,w:9}, {n:4,w:3}, {n:6,w:1}],
+					[{n:2,w:5}, {n:5,w:1}]
+				]
+			};
+
+			var worker = new Worker('../src/dijkstra.js');
+			worker.onmessage = function(e) {
+				document.getElementById("path").innerHTML = JSON.stringify(e.data);
+			};  
+			worker.postMessage(obj);
+		</script>
+	</head>
+	<body style="text-align: center;">
+		<h1>Path: <span id="path"></span></h1>
+		<p><img src="dijkstra.jpg"></p>
+	</body>
+</html>
