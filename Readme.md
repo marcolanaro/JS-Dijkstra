@@ -4,7 +4,7 @@ The algorithm is implemented inside a web workers so it provide a simple means t
 
 # How to call the function
 
-	var worker = new Worker('../dijkstra.js');
+	var worker = new Worker('./dijkstra.js');
 	worker.onmessage = function(e) {
 		alert( JSON.stringify(e.data) );
 	};  
@@ -12,7 +12,7 @@ The algorithm is implemented inside a web workers so it provide a simple means t
 
 ## Object passed to the script
 
-For every node of the map, list each node connected. The node is descripted by the object '{n:i, w:K}' where 'i' is the id of the node connected and	'K' the weight of the connection.
+For every node of the map, list each node connected. The node is descripted by the object `{n:i, w:K}` where `i` is the id of the node connected and	`K` the weight of the connection.
 
 	{
 		from: id_start,
