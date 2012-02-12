@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var obj = {
+				diag: true,
+				zeta: true,
+				from: {x: 0, y: 0, z: 0},
+				to: {x: 2, y: 3, z: 0},
+				graph: [
+					[[true],[true],[true],[true]],
+					[[true],[true,true],[true],[true]],
+					[[true],[true],[true],[true]]
+				]
+			};
+
+			var worker = new Worker('../../src/dijkstra-grid.js');
+			worker.onmessage = function(e) {
+				document.getElementById("path").innerHTML = JSON.stringify(e.data);
+			};  
+			worker.postMessage(obj);
+		</script>
+	</head>
+	<body style="text-align: center;">
+		<h1>Path: <span id="path"></span></h1>
+	</body>
+</html>
