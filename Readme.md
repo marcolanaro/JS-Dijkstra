@@ -58,5 +58,6 @@ In this case the graph is a grid of tile. Every tile is identified by `{x,y,z}` 
 You can choose if path of search can have diagonal with the `diag` variabel. You can also choose if the `z` elemets where `z > 0` are only obstacles or the path is search using also that elements.
 
 The algorithm choose the shortest path, this the features:
-1. If exist the coordinate `{x,y,z}` the path can't be choose using the coordinate `{x,y,z-1}`.
-2. If there is two differents possibles path with the same number of movements, the algorithm choose always the one that remain in the same `z` coordinate.
+
+1.  If exist the coordinate `{x,y,z}` the path can't be choose using the coordinate `{x,y,z-1}`.
+2.  If there is two differents possibles path with the same number of movements, the algorithm choose always the one that remain in the same `z` coordinate.
