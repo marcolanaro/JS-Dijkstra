@@ -29,7 +29,7 @@ For every node of the graph, list each node connected. The node is descripted by
 ## Dijkstra in a Grid
 
 You have the possibility to use Dijkstra's algorithm in a classic game map with `{x,y,z}` coordinates.
-For use this worker you need a browser like Mozilla Firefox that support nested workers.
+You can use an all-in-one worker: `src/dijkstra-grid.js` or the plugin `src/plugin/dijkstra-grid.js` to the standard worker `src/dijkstra.js`. The problem with the second possibility is that you need a browser that support nested worker. At the moment, webkit browsers don't support this feature.
 
 ### How to call the worker
 
@@ -49,9 +49,9 @@ In this case the graph is a grid of tile. Every tile is identified by `{x,y,z}` 
 		from: {x: INTEGER, y: INTEGER, z: INTEGER},
 		to: {x: INTEGER, y: INTEGER, z: INTEGER},
 		graph: [
-			[[true],[true],[true],[true]],
-			[[true],[true,true],[true],[true]],
-			[[true],[true],[true],[true]]
+			[[BOOLEAN],[BOOLEAN],[BOOLEAN],[BOOLEAN]],
+			[[BOOLEAN],[BOOLEAN,BOOLEAN],[BOOLEAN],[BOOLEAN]],
+			[[BOOLEAN],[BOOLEAN],[BOOLEAN],[BOOLEAN]]
 		]
 	}
 
